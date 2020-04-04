@@ -59,6 +59,7 @@
 	"go"
 	"magit"
 	"neotree"
+	"org"
 	"themes"
 	"proxy"
 	"python"
