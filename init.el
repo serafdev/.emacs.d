@@ -25,6 +25,28 @@
  ((string-equal system-type "darwin")
   (user/load-config "darwin")))
 
+;; ================= Generic Languages Setup  =============
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
+
+(use-package company
+  :ensure t
+  :config
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1))
+
+(use-package company-lsp
+  :ensure t
+  :commands company-lsp)
+;; Optional - provides snippet support.
+(use-package yasnippet
+  :ensure t
+  :commands yas-minor-mode
+  :hook (go-mode . yas-minor-mode))
+
+(require 'lsp-mode)
 
 ;; ================ IDE Packages, and such ===============
 (package-install 'use-package)
