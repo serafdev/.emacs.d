@@ -20,6 +20,7 @@
 ;; ================= OS Specifics ========================
 ;; Load MacOS specifics. I wish to change to
 ;; (user/load-config system-type) but gnu/linux has a slash in it.
+;; Maybe use a string split using the slash and name the file gnu?
 (cond
  ((string-equal system-type "darwin")
   (user/load-config "darwin")))
@@ -51,7 +52,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
+    (magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
