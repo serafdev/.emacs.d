@@ -1,13 +1,5 @@
-;; Disable the splash buffer
-(setq inhibit-startup-screen t)
-(setq initial-scratch-message "")
-
-;;;;;;;;;;;; Packages load
-(defun user/load-config (config)
-  (load-library (concat "~/.emacs.d/configs/" config ".el")))
-
-(setq package-check-signature nil)
 ;; Package management
+(setq package-check-signature nil)
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
@@ -15,6 +7,13 @@
 (package-initialize)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+;; Disable the splash buffer
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message "")
+
+;;;;;;;;;;;; Packages load
+(defun user/load-config (config)
+  (load-library (concat "~/.emacs.d/configs/" config ".el")))
 
 
 ;; ================= OS Specifics ========================
@@ -56,12 +55,12 @@
 ;; Set layers here, for now they are just the file names in configs/
 (setq layers
       '(
+	"proxy"
 	"go"
 	"magit"
 	"neotree"
-	"org"
+        "org"
 	"themes"
-	"proxy"
 	"python"
 	))
 
