@@ -7,3 +7,5 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 
+;; Improve performance on MACOS for magit
+(setq magit-git-executable "/usr/bin/git")
