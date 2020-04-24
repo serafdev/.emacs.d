@@ -60,7 +60,6 @@
 	"magit"
 	"neotree"
         "org"
-	"mermaid"
 	"themes"
 	"python"
 	))
@@ -84,7 +83,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ob-mermaid lsp-python-ms magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
+    (lsp-python-ms magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
