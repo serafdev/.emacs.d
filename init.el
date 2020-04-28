@@ -60,7 +60,6 @@
 	"magit"
 	"neotree"
         "org"
-	"mermaid"
 	"themes"
 	"python"
 	"js"
@@ -74,8 +73,15 @@
 ;;============= Tweaking ==================
 ;; Buffer Reload with no confirmation; source: misc-cmds.el
 (global-auto-revert-mode)
+
+;; Add line numbers
 (global-display-line-numbers-mode)
 (linum-relative-global-mode)
+
+;; Copy paste using simpleclip
+(require 'simpleclip)
+(simpleclip-mode 1)
+
 ;;=========================================
 
 (custom-set-variables
@@ -85,7 +91,9 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (linum-relative ob-mermaid lsp-python-ms magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
+
+    (linum-relative simpleclip lsp-python-ms magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
