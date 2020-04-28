@@ -63,6 +63,7 @@
 	"mermaid"
 	"themes"
 	"python"
+	"js"
 	))
 
 ;; Runs load-config on the layers
@@ -73,8 +74,8 @@
 ;;============= Tweaking ==================
 ;; Buffer Reload with no confirmation; source: misc-cmds.el
 (global-auto-revert-mode)
-
-
+(global-display-line-numbers-mode)
+(linum-relative-global-mode)
 ;;=========================================
 
 (custom-set-variables
@@ -84,7 +85,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ob-mermaid lsp-python-ms magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
+    (linum-relative ob-mermaid lsp-python-ms magit neotree doom-themes exec-path-from-shell flycheck use-package go-mode yasnippet company-lsp company lsp-ui lsp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
